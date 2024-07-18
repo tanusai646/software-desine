@@ -1,28 +1,37 @@
-@startuml sort_strategy_example
+@startuml strategyの事例
+skinparam groupInheritance 2
 
-interface SortStrategy {
-    +sort(array: int[]): int[]
+
+interface PaymentStrategy {
+    +支払う()
 }
 
-class BubbleSort implements SortStrategy {
-    +sort(array: int[]): int[]
+class ICCardPayment implements PaymentStrategy {
+    +支払う()
 }
 
-class QuickSort implements SortStrategy {
-    +sort(array: int[]): int[]
+class CashPayment implements PaymentStrategy {
+    +支払う()
 }
 
-class MergeSort implements SortStrategy {
-    +sort(array: int[]): int[]
+class CouponPayment implements PaymentStrategy{
+    -残りの回数
+    +支払う()
 }
 
-class Context {
-    -strategy: SortStrategy
-    +setSortStrategy(strategy: SortStrategy): void
-    +executeSort(array: int[]): int[]
+class CommuterPassPayment implements PaymentStrategy{
+    -期間
+    +支払う()
 }
 
-Context o-right-> SortStrategy
-Context .up.|> Object
+class BusFarePayment {
+    +支払い方法を設定する()
+    +運賃を支払う()
+}
+
+
+
+BusFarePayment o-right-> PaymentStrategy
+
 
 @enduml
