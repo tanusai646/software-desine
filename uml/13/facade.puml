@@ -1,0 +1,65 @@
+@startuml Fasadeの事例
+
+class User {
+    + 検索する()
+}
+
+class Facade {
+    + 検索する()
+    + バス停を検索する()
+    + 経路を検索する()
+    + 経路を表示する()
+    + 乗換検索をする()
+}
+
+class SerchBusStop {
+    +バス停を検索する()
+    +エラーを表示する()
+}
+
+class SerchRoute {
+    - StartBusStop
+    - EndBusStop
+    - Date
+    - Time
+    + 経路を検索する()
+    + エラーを表示する()
+}
+
+class SerchTransfer {
+    - StartBusStop
+    - EndBusStop
+    - TransferBusStop
+    + 乗換経路を検索する()
+    + 乗換バス停を決定する()
+    + 経路を検索する()
+}
+
+class ShowRoute {
+    - departureStop: String
+    - arrivalStop: String
+    - departureTime: Date
+    - arrivalTime: Date
+    - busSchedules: List<BusSchedule>
+    + 経路を表示する()
+    + 時間を表示する()
+}
+
+class Server{
+}
+
+User -down-> Facade
+Facade -down-> SerchBusStop
+Facade -down-> SerchRoute
+Facade -down-> SerchTransfer
+SerchBusStop -right-> SerchRoute
+
+SerchRoute -right-> SerchTransfer
+SerchRoute -down-> ShowRoute
+SerchTransfer -down-> ShowRoute
+
+SerchBusStop -- Server
+SerchRoute -- Server
+SerchTransfer -- Server
+
+@enduml
