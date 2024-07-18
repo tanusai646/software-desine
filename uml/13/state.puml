@@ -1,0 +1,47 @@
+@startuml stateの事例
+skinparam groupInheritance 2
+
+class Context {
+    -state
+    -busNumber
+    +状態を取得する()
+    +運行を開始する()
+    +回送を開始する()
+    +休止を開始する()
+}
+
+class Pause implements State {
+    +運行を開始する()
+    +回送を開始する()
+    +休止を開始する()
+}
+
+class Forwarding implements State {
+    -destination
+    -operationID
+    +運行を開始する()
+    +回送を開始する()
+    +休止を開始する()
+    +向かう先を設定する()
+    +運行IDを設定する()
+}
+
+class Operation implements State {
+    -destination
+    -operationID
+    +運行を開始する()
+    +回送を開始する()
+    +休止を開始する()
+    +向かう先を設定する()
+    +運行IDを設定する()
+}
+
+interface State {
+    +運行を開始する()
+    +回送を開始する()
+    +休止を開始する()
+}
+
+Context o-right-> State
+
+@enduml

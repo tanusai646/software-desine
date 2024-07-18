@@ -1,10 +1,10 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.8.31)  12 JUL 2024 18:04
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.8.31)  18 JUL 2024 00:04
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/imayu/Documents/program/software-desine/report/縺^^be縺^^a8繧√ｈ縺^^86/report.tex
-(c:/Users/imayu/Documents/program/software-desine/report/縺^^be縺^^a8繧√ｈ縺^^86/report.tex
+**c:/Users/imayu/Documents/program/software-desine/report/縺^^be縺^^a8繧√ｈ縺^^86/matome.tex
+(c:/Users/imayu/Documents/program/software-desine/report/縺^^be縺^^a8繧√ｈ縺^^86/matome.tex
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -567,8 +567,8 @@ File: l3backend-dvips.def 2023-04-19 L3 backend support: dvips
 LaTeX Warning: Unused global option(s):
     [documentclass].
 
-(out/report.aux)
-\openout1 = `report.aux'.
+(out/matome.aux)
+\openout1 = `matome.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
@@ -664,7 +664,20 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 41.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 41.
-[2] (out/report.aux)
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 19.9311pt on input line 41.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 19.9311pt on input line 41.
+[2] [3]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 65.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 65.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 65.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 65.
+[4] (out/matome.aux)
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-06-01> patch level 1
@@ -672,12 +685,12 @@ L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 22249 strings out of 475592
- 465643 string characters out of 5778113
+ 22257 strings out of 475592
+ 465748 string characters out of 5778113
  1913637 words of memory out of 5000000
- 43418 multiletter control sequences out of 15000+600000
- 569585 words of font info for 90 fonts, out of 8000000 for 9000
+ 43424 multiletter control sequences out of 15000+600000
+ 570761 words of font info for 96 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  84i,6n,89p,481b,275s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/report.dvi (2 pages, 1504 bytes).
+Output written on out/matome.dvi (4 pages, 3284 bytes).

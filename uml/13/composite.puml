@@ -1,0 +1,20 @@
+@startuml compositeの事例
+
+class HtmlElement{
+    -name: string
+}
+
+class HtmlLeaf{
+    
+}
+
+class HtmlComposite{
+    +子要素保持
+    +子要素追加
+    +子要素削除
+}
+
+HtmlElement <|-- HtmlComposite
+HtmlElement <|-- HtmlLeaf
+HtmlElement <--o HtmlComposite
+@enduml

@@ -1,0 +1,28 @@
+@startuml sort_strategy_example
+
+interface SortStrategy {
+    +sort(array: int[]): int[]
+}
+
+class BubbleSort implements SortStrategy {
+    +sort(array: int[]): int[]
+}
+
+class QuickSort implements SortStrategy {
+    +sort(array: int[]): int[]
+}
+
+class MergeSort implements SortStrategy {
+    +sort(array: int[]): int[]
+}
+
+class Context {
+    -strategy: SortStrategy
+    +setSortStrategy(strategy: SortStrategy): void
+    +executeSort(array: int[]): int[]
+}
+
+Context o-right-> SortStrategy
+Context .up.|> Object
+
+@enduml

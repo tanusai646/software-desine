@@ -1,0 +1,31 @@
+@startuml observerの事例
+
+interface Observer {
+    +更新()
+}
+
+interface Subject {
+    -observerlist
+    +オブザーバーの追加()
+    +オブザーバーの削除()
+}
+
+class Bus extends Subject {
+    -busNumber:
+    -status: 
+    +オブザーバーの追加()
+    +オブザーバーの削除()
+    +オブザーバーに通知()
+    +statusの設定()
+    +statusの取得()
+    +busNumberの取得()
+}
+
+class BusManager implements Observer {
+    +更新()
+    +バスの状態取得()
+}
+
+Observer <-right-o Subject
+
+@enduml
