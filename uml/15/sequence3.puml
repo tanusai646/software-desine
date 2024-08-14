@@ -1,0 +1,16 @@
+
+@startuml 時間割閲覧のシーケンス図
+title 時間割確認のシーケンス図
+'クラス等
+actor 学生 as foo1
+participant 時間割 as foo3
+participant 履修 as foo2
+
+
+group 基本系列
+    foo2 -> foo2 : 学生毎に学期，曜日，\n時間をまとめる
+    foo2 -> foo3 : 時間割を作成する
+    foo1 -> foo3 : 時間割を閲覧する
+end
+
+@enduml

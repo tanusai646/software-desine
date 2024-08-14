@@ -1,0 +1,18 @@
+@startuml 成績報告メールシーケンス図
+title 成績報告メールのシーケンス図
+'クラス等
+actor 教員 as foo1
+participant 報告管理 as foo2
+participant 成績 as foo3
+
+group 基本系列
+    foo2 -> foo3 : 成績のステータスを確認する
+    foo3 -> foo2 : ステータスを報告する
+    group 提出期限一週間前に本登録状態でない時
+        foo2 -> foo1 : 提出期限の通知をする
+    end
+    group 提出期限を超えても本登録状態でない時
+        foo2 -> foo1 : 提出の督促を通知する
+    end
+end
+@enduml

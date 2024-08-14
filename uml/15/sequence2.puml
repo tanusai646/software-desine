@@ -1,0 +1,29 @@
+@startuml 履修削除のシーケンス図
+title 履修削除のシーケンス図
+'クラス等
+actor 学生 as foo1
+participant 科目一覧 as foo3
+participant 科目 as foo2
+participant 履修 as foo4
+
+group 基本系列
+    foo1 -> foo3 : 曜日，時間を選択する
+    foo3 -> foo2 : 選択された 曜日，時間，\n学生の所属学科を渡す
+    foo2 -> foo2 : 渡された条件から科目を探す
+    foo2 -> foo3 : 対象の科目を通知する
+    foo3 -> foo1 : 対象の科目を表示する
+    foo1 -> foo3 : 対象の科目を選択する
+    foo3 -> foo4 : 選択された科目を通知する
+    foo4 -> foo4 : 履修が期間外であるか確認
+    foo4 -> foo4 : 科目を履修から削除する
+end
+
+group 代替系列
+    foo4 -> foo4 : 履修削除期間かの確認
+    note left
+        履修削除期間外だった場合
+    end note
+    foo4 -> foo1 : 期間外である旨を通知
+end
+
+@enduml
