@@ -343,28 +343,16 @@ INPUT ./figure/4-8.png
 INPUT ./figure/4-8.png
 INPUT ./figure/4-8.png
 INPUT extractbb -B cropbox -O figure/4-8.png
-INPUT ./figure/5-1.png
-INPUT ./figure/5-1.png
-INPUT ./figure/5-1.png
-INPUT extractbb -B cropbox -O figure/5-1.png
-INPUT ./figure/6-1.png
-INPUT ./figure/6-1.png
-INPUT ./figure/6-1.png
-INPUT extractbb -B cropbox -O figure/6-1.png
-INPUT ./figure/6-2.png
-INPUT ./figure/6-2.png
-INPUT ./figure/6-2.png
-INPUT extractbb -B cropbox -O figure/6-2.png
-INPUT ./figure/7-1.png
-INPUT ./figure/7-1.png
-INPUT ./figure/7-1.png
-INPUT extractbb -B cropbox -O figure/7-1.png
-INPUT ./figure/8-1.png
-INPUT ./figure/8-1.png
-INPUT ./figure/8-1.png
-INPUT extractbb -B cropbox -O figure/8-1.png
-INPUT ./figure/8-2.png
-INPUT ./figure/8-2.png
-INPUT ./figure/8-2.png
-INPUT extractbb -B cropbox -O figure/8-2.png
+INPUT ./figure/4-9.png
+INPUT ./figure/4-9.png
+INPUT ./figure/4-9.png
+INPUT extractbb -B cropbox -O figure/4-9.png
+INPUT ./figure/4-10.png
+INPUT ./figure/4-10.png
+INPUT ./figure/4-10.png
+INPUT extractbb -B cropbox -O figure/4-10.png
+INPUT ./figure/4-11.png
+INPUT ./figure/4-11.png
+INPUT ./figure/4-11.png
+INPUT extractbb -B cropbox -O figure/4-11.png
 INPUT out/report3.aux
