@@ -1,21 +1,19 @@
-@startuml 履修削除のシーケンス図
-title 履修削除のシーケンス図
+@startuml 6-2
+title 履修削除のシーケンス図(使用なし)
 'クラス等
 actor 学生 as foo1
+participant 科目検索 as foo2
 participant 科目一覧 as foo3
-participant 科目 as foo2
 participant 履修 as foo4
 
 group 基本系列
-    foo1 -> foo3 : 曜日，時間を選択する
-    foo3 -> foo2 : 選択された 曜日，時間，\n学生の所属学科を渡す
-    foo2 -> foo2 : 渡された条件から科目を探す
-    foo2 -> foo3 : 対象の科目を通知する
-    foo3 -> foo1 : 対象の科目を表示する
-    foo1 -> foo3 : 対象の科目を選択する
-    foo3 -> foo4 : 選択された科目を通知する
-    foo4 -> foo4 : 履修が期間外であるか確認
-    foo4 -> foo4 : 科目を履修から削除する
+    foo1 -> foo2 : 条件を選択する
+    foo2 -> foo3 : 条件の科目を渡す
+    foo3 -> foo1 : 表示する
+    foo1 -> foo2 : 科目を選択する
+    foo2 -> foo4 : 科目を履修登録する
+    foo4 -> foo4 : 科目が他の履修登録された\n科目と被っていないか確認する
+    foo4 -> foo4 : 科目を保存する
 end
 
 group 代替系列

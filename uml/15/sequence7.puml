@@ -1,4 +1,4 @@
-@startuml ログインのユースケース
+@startuml 6-1
 title ログインのシーケンス図
 'クラス等
 actor ユーザー as foo1

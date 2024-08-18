@@ -1,37 +1,34 @@
-@startuml 成績を確認するのシーケンス図
+@startuml 6-4
 title 成績を確認，登録のシーケンス図
 'クラス等
 actor 学生 as foo1
 participant 成績表 as foo2
-participant 履修 as foo3
-participant 成績 as foo8
-participant 履修者一覧 as foo6
-participant 担当科目一覧 as foo7
-actor 教員 as foo9
+participant 成績 as foo3
+participant 履修者一覧 as foo4
+participant 担当科目一覧 as foo5
+actor 教員 as foo6
 
 group 基本系列
-    foo7 -> foo9 : 担当している科目を表示する
-    foo9 -> foo7 : 科目を選択する
-    foo7 -> foo6 : 選択された科目を通知する
-    foo6 -> foo9 : 履修者一覧を表示する
-    foo9 -> foo8 : 成績を入力し保存する
-    foo8 -> foo8 : 成績を仮登録する
-    foo9 -> foo8 : 成績を登録する
-    foo8 -> foo8 : 成績を保存する
-    foo3 -> foo8 : 成績を参照する
-    foo8 -> foo3 : 成績を送る
-    foo3 -> foo2 : 管理する
+    foo5 -> foo6 : 担当している科目を表示する
+    foo6 -> foo5 : 科目を選択する
+    foo5 -> foo4 : 選択された科目を報告する
+    foo4 -> foo6 : 履修者一覧を表示する
+    foo6 -> foo3 : 入力し保存する
+    foo3 -> foo3 : 仮登録として保存する
+    foo6 -> foo3 : 入力し保存する
+    foo3 -> foo3 : 本登録として保存する
+    foo3 -> foo2 : 内容を報告する
     foo2 -> foo2 : 成績表を作成する
     foo1 -> foo2 : 成績表を閲覧する
 end
 
 group 代替系列
-    foo9 -> foo8 : 成績を登録する
+    foo6 -> foo3 : 成績を登録する
     note left
         すべての履修者に対して成績
         が登録されていなかった場合
     end note
-    foo8 -> foo9 : エラーを通知する
+    foo3 -> foo6 : エラーを通知する
 end
 
 @enduml

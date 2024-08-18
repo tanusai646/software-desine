@@ -1,4 +1,4 @@
-@startuml 修得を促すのシーケンス図
+@startuml 6-5
 title 修得を促すのシーケンス図
 'クラス等
 actor 学生 as foo1
@@ -11,7 +11,6 @@ group 基本系列
     foo1 -> foo2 : 学生情報を報告する
     foo2 -> foo4 : 必修科目を確認する
     foo4 -> foo2 : 必修科目を報告する
-    foo2 -> foo2 : 必修科目を保存する
     foo2 -> foo3 : 履修状況を確認する
     foo3 -> foo2 : 履修状況を報告する
     group 必修が修得できていなかった場合

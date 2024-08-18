@@ -1,4 +1,4 @@
-@startuml 成績報告メールシーケンス図
+@startuml 6-6
 title 成績報告メールのシーケンス図
 'クラス等
 actor 教員 as foo1

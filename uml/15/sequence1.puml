@@ -1,29 +1,40 @@
-@startuml 履修登録のシーケンス図
-title 履修登録のシーケンス図
+@startuml 6-2
+title 履修登録，削除のシーケンス図
 'クラス等
 actor 学生 as foo1
+participant 科目検索 as foo2
 participant 科目一覧 as foo3
-participant 科目 as foo2
 participant 履修 as foo4
 
 group 基本系列
-    foo1 -> foo3 : 曜日，時間を選択する
-    foo3 -> foo2 : 選択された 曜日，時間，\n学生の所属学科を渡す
-    foo2 -> foo2 : 渡された条件から科目を探す
-    foo2 -> foo3 : 対象の科目を通知する
-    foo3 -> foo1 : 対象の科目を表示する
-    foo1 -> foo3 : 対象の科目を選択する
-    foo3 -> foo4 : 選択された科目を通知する
-    foo4 -> foo4 : 被っていないか確認する
-    foo4 -> foo4 : 科目を履修に登録する
+    foo1 -> foo2 : 条件を選択する
+    foo2 -> foo3 : 条件の科目を渡す
+    foo3 -> foo1 : 表示する
+    foo1 -> foo2 : 科目を選択する
+    foo2 -> foo4 : 科目を履修登録，削除する
+    foo4 -> foo4 : 登録状況を確認する
+    group 履修登録されていない場合
+        foo4 -> foo4 : 科目が他の履修登録された\n科目と被っていないか確認する
+        foo4 -> foo4 : 科目を保存する
+    end
+    group 履修登録されていた場合
+        foo4 -> foo4 : 削除期間であるか確認する
+        foo4 -> foo4 : 科目を削除する
+    end
 end
 
 group 代替系列
-    foo4 -> foo4 : 履修が被っていないか確認
+    foo4 -> foo4 : 科目が他の履修登録された\n科目と被っていないか確認する
     note left
-        被っていいた場合
+        被っていた場合
     end note
     foo4 -> foo1 : 被っている旨を通知
+
+    foo4 -> foo4 : 削除期間であるか確認する
+    note left
+        削除期間外である場合
+    end note
+    foo4 -> foo1 : 削除期間外である旨を通知する
 end
 
 @enduml
