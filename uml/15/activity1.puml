@@ -1,0 +1,19 @@
+@startuml 7-1
+title ログインするのアクティビティ図
+
+|学生|
+start
+:ID，Passwordを入力;
+
+|システム|
+if (ID，Passwordが合っているか？) then (yes)
+    :他の科目と被っていると表示;
+else (no)
+    :ID又はPasswordが\n異なっていると表示;
+    stop
+endif
+
+|学生|
+:ログインする;
+end
+@enduml

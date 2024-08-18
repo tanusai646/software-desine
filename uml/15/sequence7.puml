@@ -1,0 +1,24 @@
+@startuml ログインのユースケース
+title ログインのシーケンス図
+'クラス等
+actor ユーザー as foo1
+participant ログイン管理 as foo3
+
+group 基本系列
+    foo1 -> foo3 : IDとPasswordを入力する
+    foo3 -> foo3 : IDとPasswordを確認する
+    foo3 -> foo1 : ログイン許可を出す
+    foo1 -> foo1 : システムにログインする
+    foo3 -> foo3 : ログインログを取り，保存する
+end
+
+group 代替系列
+    foo3 -> foo3 : IDとPasswordを確認する
+    note left
+        ID又はPassword
+        が違った場合
+    end note
+    foo3 -> foo1 : エラーを通知
+end
+
+@enduml

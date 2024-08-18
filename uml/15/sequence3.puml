@@ -9,7 +9,8 @@ participant 履修 as foo2
 
 group 基本系列
     foo2 -> foo2 : 学生毎に学期，曜日，\n時間をまとめる
-    foo2 -> foo3 : 時間割を作成する
+    foo2 -> foo3 : 管理する
+    foo3 -> foo3 : 時間割を作成する
     foo1 -> foo3 : 時間割を閲覧する
 end
 

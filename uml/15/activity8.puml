@@ -1,0 +1,23 @@
+@startuml 7-4
+title 成績報告の通知を出す
+|システム|
+
+if (すべての履修者に対して\n成績が登録されているか？) then (yes)
+    stop
+else (yes)
+    if (成績登録期限一週間前か) then (no)
+        stop
+    else (yes)
+        if (成績登録期限を過ぎているか) then (yes)
+            :成績登録督促を通知する;
+        else (no)
+            |システム|
+            :成績登録期限を通知する;
+        endif
+        |教員|
+        :通知を受け取る;
+        end
+    endif
+endif
+@enduml
+

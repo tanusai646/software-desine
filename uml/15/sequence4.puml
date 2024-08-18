@@ -10,6 +10,7 @@ participant 担当科目一覧 as foo7
 actor 教員 as foo9
 
 group 基本系列
+    foo7 -> foo9 : 担当している科目を表示する
     foo9 -> foo7 : 科目を選択する
     foo7 -> foo6 : 選択された科目を通知する
     foo6 -> foo9 : 履修者一覧を表示する
@@ -19,7 +20,8 @@ group 基本系列
     foo8 -> foo8 : 成績を保存する
     foo3 -> foo8 : 成績を参照する
     foo8 -> foo3 : 成績を送る
-    foo3 -> foo2 : 成績表を作成する
+    foo3 -> foo2 : 管理する
+    foo2 -> foo2 : 成績表を作成する
     foo1 -> foo2 : 成績表を閲覧する
 end
 
