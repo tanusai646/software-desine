@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.8.31)  17 AUG 2024 19:44
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.8.31)  19 AUG 2024 21:01
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -570,24 +570,24 @@ LaTeX Warning: Unused global option(s):
 (out/report3.aux)
 \openout1 = `report3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
@@ -633,55 +633,55 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: dvips (dvips) on input line 124.
 ))
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 39.
+(Font)              scaled to size 16.60605pt on input line 38.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 39.
+(Font)              scaled to size 16.60605pt on input line 38.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 39.
+(Font)              scaled to size 11.53198pt on input line 38.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 39.
+(Font)              scaled to size 11.53198pt on input line 38.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 39.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
+(Font)              scaled to size 5.76599pt on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 39.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 38.
 (c:/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [1
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 46.
+(Font)              scaled to size 13.83836pt on input line 45.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 46.
+(Font)              scaled to size 13.83836pt on input line 45.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 46.
+(Font)              scaled to size 13.83836pt on input line 45.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 46.
+(Font)              scaled to size 13.83836pt on input line 45.
 [2
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 86.
+(Font)              scaled to size 11.53198pt on input line 87.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 86.
+(Font)              scaled to size 11.53198pt on input line 87.
 File: figure/3-1.png Graphic file (type bmp)
 <figure/3-1.png>
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 108.
+(Font)              scaled to size 8.64899pt on input line 115.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 108.
+(Font)              scaled to size 8.64899pt on input line 115.
 [3]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 118.
+(Font)              scaled to size 9.60999pt on input line 127.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 118.
+(Font)              scaled to size 9.60999pt on input line 127.
 File: figure/4-1.png Graphic file (type bmp)
 <figure/4-1.png>
 File: figure/4-2.png Graphic file (type bmp)
@@ -690,23 +690,67 @@ File: figure/4-3.png Graphic file (type bmp)
 <figure/4-3.png>
 File: figure/4-4.png Graphic file (type bmp)
 <figure/4-4.png>
-[4]
 File: figure/4-5.png Graphic file (type bmp)
 <figure/4-5.png>
+[4]
 File: figure/4-6.png Graphic file (type bmp)
 <figure/4-6.png>
 File: figure/4-7.png Graphic file (type bmp)
 <figure/4-7.png>
 File: figure/4-8.png Graphic file (type bmp)
 <figure/4-8.png>
-[5]
 File: figure/4-9.png Graphic file (type bmp)
 <figure/4-9.png>
 File: figure/4-10.png Graphic file (type bmp)
 <figure/4-10.png>
+[5]
 File: figure/4-11.png Graphic file (type bmp)
 <figure/4-11.png>
-[6] [7] [8] [9] [10] [11] (out/report3.aux)
+File: figure/4-12.png Graphic file (type bmp)
+<figure/4-12.png>
+[6]
+File: figure/5-1.png Graphic file (type bmp)
+<figure/5-1.png>
+
+Overfull \hbox (23.79138pt too wide) in paragraph at lines 201--202
+ [] 
+ []
+
+[7] [8]
+File: figure/6-1.png Graphic file (type bmp)
+<figure/6-1.png>
+File: figure/6-2.png Graphic file (type bmp)
+<figure/6-2.png>
+File: figure/6-3.png Graphic file (type bmp)
+<figure/6-3.png>
+File: figure/6-5.png Graphic file (type bmp)
+<figure/6-5.png>
+[9]
+File: figure/6-4.png Graphic file (type bmp)
+<figure/6-4.png>
+[10]
+File: figure/6-6.png Graphic file (type bmp)
+<figure/6-6.png>
+[11]
+File: figure/7-1.png Graphic file (type bmp)
+<figure/7-1.png>
+File: figure/7-2.png Graphic file (type bmp)
+<figure/7-2.png>
+File: figure/7-3.png Graphic file (type bmp)
+<figure/7-3.png>
+File: figure/7-4.png Graphic file (type bmp)
+<figure/7-4.png>
+[12]
+File: figure/7-5.png Graphic file (type bmp)
+<figure/7-5.png>
+File: figure/7-6.png Graphic file (type bmp)
+<figure/7-6.png>
+File: figure/7-7.png Graphic file (type bmp)
+<figure/7-7.png>
+[13] [14]
+File: figure/8-1.png Graphic file (type bmp)
+<figure/8-1.png>
+[15] [16] (out/report3.aux)
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-06-01> patch level 1
@@ -714,12 +758,12 @@ L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 22388 strings out of 475592
- 468291 string characters out of 5778113
- 1917637 words of memory out of 5000000
- 43539 multiletter control sequences out of 15000+600000
+ 22490 strings out of 475592
+ 470231 string characters out of 5778113
+ 1918637 words of memory out of 5000000
+ 43625 multiletter control sequences out of 15000+600000
  571674 words of font info for 100 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  84i,6n,89p,474b,463s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/report3.dvi (11 pages, 14656 bytes).
+Output written on out/report3.dvi (16 pages, 19224 bytes).

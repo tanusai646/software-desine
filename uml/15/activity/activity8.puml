@@ -1,7 +1,7 @@
-@startuml 7-4
+@startuml 7-7
 title 成績報告の通知を出す
 |システム|
-
+start
 if (すべての履修者に対して\n成績が登録されているか？) then (yes)
     stop
 else (yes)

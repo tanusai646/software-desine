@@ -7,13 +7,12 @@ start
 
 |システム|
 if (ID，Passwordが合っているか？) then (yes)
-    :他の科目と被っていると表示;
+    :ログインを許可する;
 else (no)
     :ID又はPasswordが\n異なっていると表示;
     stop
 endif
 
-|学生|
 :ログインする;
 end
 @enduml

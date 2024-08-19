@@ -1,5 +1,4 @@
 \documentclass[documentclass]{jsarticle}
-%ディジタル信号処理 Matlab演習1
 \usepackage[top=25truemm,bottom=25truemm,left=20truemm,right=20truemm]{geometry}
 \usepackage{listings, jlisting, color}
 \usepackage[dvipdfmx]{graphicx}
@@ -78,28 +77,36 @@
   \item ステートマシン図
 \end{itemize}
 
+これらの図を作成し，分析が一定できると，設計モデルの作成に着手した．
+設計モデルでは，パターンの適用を駆使し，システムがより現実的になるよう改変を加えた．
+
 
 \newpage
 
 \section{ユースケース図}
+\subsection*{概要}
 システムの概要を把握するためにユースケース図を作成した．
-\subsection*{作成}
 今回のシステムの内容から，必要なアクターは
 \begin{itemize}
   \item 学生
   \item 教員
 \end{itemize}
 であると考えた．
-学生は
 
-\subsection*{レビュー結果メモ}
+学生は「システムにログイン」，「履修登録，削除」等の直接行うユースケースを作成した．
+「履修を促す」というシステム側から行われるユースケースを関連付けている．
+
+教員は「システムにログイン」，「成績の報告をする」というユースケースを作成した．
+また，学生と同様に成績報告に関する通知を行うユースケースを関連付けている．
+
+\subsection*{レビュー結果}
 ユースケース「履修の可否を確認する」に関して，「学生」と関連をつけた方が良いということで，「履修登録する」にincludeで関連付けた．
 また，ユースケース「ログインする」が必要だと思ったので，作成し，他のユースケースと関連をつけた．
 
 概要から「履修修正」という要件があったが，今回のシステムでは履修削除と履修登録を組み合わせて行うと考えた．
 
-\subsection*{概要}
-レビュー等を通して作成したユースケース図が図\ref*{fig:3-1}である．
+\subsection*{作成した図}
+レビュー等を通して作成したユースケースが図\ref*{fig:3-1}である．
 %ユースケース図の作成結果
 \begin{figure}[H]
   \begin{center}
@@ -112,140 +119,151 @@
 \newpage
 
 \section{ユースケース記述}
+\subsection*{概要}
 上記で作成したユースケースすべてに対してユースケース記述の作成を行った．
-\subsection*{概要と作成結果}
+ユースケースそれぞれに対して基本系列を作成し，加えて代替系列が必要なユースケースでは適宜作成を行った．
 
+\subsection*{作成した図}
 \subsubsection*{1.学生用にログインする}
-
-%1のユースケース記述
 \begin{figure}[H]
-  \begin{center}
-    \includegraphics*[scale=0.6]{figure/4-1.png}
-  \end{center}
-  \caption{ユースケース図}
-  \label{fig:4-1}
+  \includegraphics*[scale=0.4]{figure/4-1.png}
 \end{figure}
 
 \subsubsection*{2.履修登録する}
 \begin{figure}[H]
-  \begin{center}
-    \includegraphics*[scale=0.6]{figure/4-2.png}
-  \end{center}
-  \caption{ユースケース図}
-  \label{fig:4-2}
+  \includegraphics*[scale=0.4]{figure/4-2.png}
 \end{figure}
 
 \subsubsection*{3.履修削除する}
 \begin{figure}[H]
-  \begin{center}
-    \includegraphics*[scale=0.6]{figure/4-3.png}
-  \end{center}
-  \caption{ユースケース図}
-  \label{fig:4-3}
+  \includegraphics*[scale=0.4]{figure/4-3.png}
 \end{figure}
 
 \subsubsection*{4.履修修正する}
 \begin{figure}[H]
-  \begin{center}
-    \includegraphics*[scale=0.6]{figure/4-4.png}
-  \end{center}
-  \caption{ユースケース図}
-  \label{fig:4-4}
+  \includegraphics*[scale=0.4]{figure/4-4.png}
 \end{figure}
 
 \subsubsection*{5.時間割を確認する}
 \begin{figure}[H]
-  \begin{center}
-    \includegraphics*[scale=0.6]{figure/4-5.png}
-  \end{center}
-  \caption{ユースケース図}
-  \label{fig:4-5}
+  \includegraphics*[scale=0.4]{figure/4-5.png}
 \end{figure}
 
 \subsubsection*{6.成績を確認する}
 \begin{figure}[H]
-  \begin{center}
-    \includegraphics*[scale=0.6]{figure/4-6.png}
-  \end{center}
-  \caption{ユースケース図}
-  \label{fig:4-6}
+  \includegraphics*[scale=0.4]{figure/4-6.png}
 \end{figure}
 
 \subsubsection*{7.未習得の履修を促す}
 \begin{figure}[H]
-  \begin{center}
-    \includegraphics*[scale=0.6]{figure/4-7.png}
-  \end{center}
-  \caption{ユースケース図}
-  \label{fig:4-7}
+  \includegraphics*[scale=0.4]{figure/4-7.png}
 \end{figure}
 
 \subsubsection*{8.教員用にログインする}
 \begin{figure}[H]
-  \begin{center}
-    \includegraphics*[scale=0.6]{figure/4-8.png}
-  \end{center}
-  \caption{ユースケース図}
-  \label{fig:4-8}
+  \includegraphics*[scale=0.4]{figure/4-8.png}
 \end{figure}
 
 \subsubsection*{9.成績の報告をする}
 \begin{figure}[H]
-  \begin{center}
-    \includegraphics*[scale=0.6]{figure/4-9.png}
-  \end{center}
-  \caption{ユースケース図}
-  \label{fig:4-9}
+  \includegraphics*[scale=0.4]{figure/4-9.png}
 \end{figure}
 
 \subsubsection*{10.成績報告督促を送る}
 \begin{figure}[H]
-  \begin{center}
-    \includegraphics*[scale=0.6]{figure/4-10.png}
-  \end{center}
-  \caption{ユースケース図}
-  \label{fig:4-10}
+  \includegraphics*[scale=0.4]{figure/4-10.png}
 \end{figure}
 
 \subsubsection*{11.成績報告期限メールを送る}
 \begin{figure}[H]
-  \begin{center}
-    \includegraphics*[scale=0.6]{figure/4-11.png}
-  \end{center}
-  \caption{ユースケース図}
-  \label{fig:4-11}
+  \includegraphics*[scale=0.4]{figure/4-11.png}
 \end{figure}
 
-
-\subsection*{レビュー}
-
+\subsubsection*{12.履修の可否を確認する}
+\begin{figure}[H]
+  \includegraphics*[scale=0.4]{figure/4-12.png}
+\end{figure}
 
 \newpage
 
 \section{クラス図}
 \subsection*{概要}
-
+それぞれのクラスに対して動作等を記載する．
+\paragraph*{学生クラス}
+学生の名前や学生番号が属性として保存されている．
+科目の選択や時間割を確認等の動作を行う．
 
 \subsection*{作成したもの}
 
-
-%クラス図の表示
-
+%クラス図の表示(未完成なので用修正)
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.4]{figure/5-1.png}
+  \end{center}
+  \caption{ユースケース図}
+  \label{fig:5-1}
+\end{figure}
 
 \newpage
 
 \section{シーケンス図}
 \subsection*{概要}
-作成したシーケンス図は乗降用，チケット購入用，のシーケンス図を作成した．
-基本的にユースケース記述に記載したことをそのまま実現した．
-これらの図にはクラス図で出てきたもののみを用いて実現するよう工夫した．
-要するに，新しいクラスを作るような作業は行わなかった．
-
-\subsection*{レビュー結果メモ}
+作成したシーケンス図は，
 \begin{itemize}
-  \item ユースケース記述との相違点があったので，順番を入れ替える等の作業を行った
+  \item 
 \end{itemize}
+
+
 \subsection*{作成した図}
+
+%シーケンス図の表示
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.49\columnwidth}
+      \centering
+      \includegraphics[width=1.0\columnwidth]{figure/6-1.png}
+      \caption{ログイン時のシーケンス図}
+      \label{fig:6-1}
+  \end{minipage}
+  \begin{minipage}[b]{0.49\columnwidth}
+      \centering
+      \includegraphics[width=1.0\columnwidth]{figure/6-2.png}
+      \caption{履修登録，履修削除のシーケンス図}
+      \label{fig:6-2}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.49\columnwidth}
+      \centering
+      \includegraphics[width=1.0\columnwidth]{figure/6-3.png}
+      \caption{時間割確認のシーケンス図}
+      \label{fig:6-3}
+  \end{minipage}
+  \begin{minipage}[b]{0.49\columnwidth}
+      \centering
+      \includegraphics[width=1.0\columnwidth]{figure/6-5.png}
+      \caption{修得を促すシーケンス図}
+      \label{fig:6-5}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.5]{figure/6-4.png}
+  \end{center}
+  \caption{ユースケース図}
+  \label{fig:6-4}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.5]{figure/6-6.png}
+  \end{center}
+  \caption{ユースケース図}
+  \label{fig:6-6}
+\end{figure}
 
 
 \newpage
@@ -256,15 +274,81 @@
 
 
 \subsection*{作成した図}
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.4]{figure/7-1.png}
+  \end{center}
+  \caption{ユースケース図}
+  \label{fig:7-1}
+\end{figure}
 
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.4]{figure/7-2.png}
+  \end{center}
+  \caption{ユースケース図}
+  \label{fig:7-2}
+\end{figure}
 
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.49\columnwidth}
+      \centering
+      \includegraphics[width=0.9\columnwidth]{figure/7-3.png}
+      \caption{ログイン時のシーケンス図}
+      \label{fig:7-3}
+  \end{minipage}
+  \begin{minipage}[b]{0.49\columnwidth}
+      \centering
+      \includegraphics[width=0.9\columnwidth]{figure/7-4.png}
+      \caption{履修登録，履修削除のシーケンス図}
+      \label{fig:7-4}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[b]{0.49\columnwidth}
+      \centering
+      \includegraphics[width=1.0\columnwidth]{figure/7-5.png}
+      \caption{ログイン時のシーケンス図}
+      \label{fig:7-5}
+  \end{minipage}
+  \begin{minipage}[b]{0.49\columnwidth}
+      \centering
+      \includegraphics[width=1.0\columnwidth]{figure/7-6.png}
+      \caption{履修登録，履修削除のシーケンス図}
+      \label{fig:7-6}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.4]{figure/7-7.png}
+  \end{center}
+  \caption{ユースケース図}
+  \label{fig:7-7}
+\end{figure}
 \newpage
 
 \section{ステートマシン図}
 \subsection*{概要}
+今回のシステムにおいて，「成績」の報告に関してステートが変化することからステートマシン図を作成した．
+成績は，「未登録状態」→「仮成績」→「本成績」の順で変化する．
+その図を図\ref*{fig:8-1}で示す．
 
+\subsection*{作成した図}
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.6]{figure/8-1.png}
+  \end{center}
+  \caption{}
+  \label{fig:8-1}
+\end{figure}
 
-\subsection*{レビュー}
+\newpage
+
+\section{設計モデルのクラス図}
 
 
 \section{まとめ}

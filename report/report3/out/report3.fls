@@ -355,4 +355,68 @@ INPUT ./figure/4-11.png
 INPUT ./figure/4-11.png
 INPUT ./figure/4-11.png
 INPUT extractbb -B cropbox -O figure/4-11.png
+INPUT ./figure/4-12.png
+INPUT ./figure/4-12.png
+INPUT ./figure/4-12.png
+INPUT extractbb -B cropbox -O figure/4-12.png
+INPUT ./figure/5-1.png
+INPUT ./figure/5-1.png
+INPUT ./figure/5-1.png
+INPUT extractbb -B cropbox -O figure/5-1.png
+INPUT ./figure/6-1.png
+INPUT ./figure/6-1.png
+INPUT ./figure/6-1.png
+INPUT extractbb -B cropbox -O figure/6-1.png
+INPUT ./figure/6-2.png
+INPUT ./figure/6-2.png
+INPUT ./figure/6-2.png
+INPUT extractbb -B cropbox -O figure/6-2.png
+INPUT ./figure/6-3.png
+INPUT ./figure/6-3.png
+INPUT ./figure/6-3.png
+INPUT extractbb -B cropbox -O figure/6-3.png
+INPUT ./figure/6-5.png
+INPUT ./figure/6-5.png
+INPUT ./figure/6-5.png
+INPUT extractbb -B cropbox -O figure/6-5.png
+INPUT ./figure/6-4.png
+INPUT ./figure/6-4.png
+INPUT ./figure/6-4.png
+INPUT extractbb -B cropbox -O figure/6-4.png
+INPUT ./figure/6-6.png
+INPUT ./figure/6-6.png
+INPUT ./figure/6-6.png
+INPUT extractbb -B cropbox -O figure/6-6.png
+INPUT ./figure/7-1.png
+INPUT ./figure/7-1.png
+INPUT ./figure/7-1.png
+INPUT extractbb -B cropbox -O figure/7-1.png
+INPUT ./figure/7-2.png
+INPUT ./figure/7-2.png
+INPUT ./figure/7-2.png
+INPUT extractbb -B cropbox -O figure/7-2.png
+INPUT ./figure/7-3.png
+INPUT ./figure/7-3.png
+INPUT ./figure/7-3.png
+INPUT extractbb -B cropbox -O figure/7-3.png
+INPUT ./figure/7-4.png
+INPUT ./figure/7-4.png
+INPUT ./figure/7-4.png
+INPUT extractbb -B cropbox -O figure/7-4.png
+INPUT ./figure/7-5.png
+INPUT ./figure/7-5.png
+INPUT ./figure/7-5.png
+INPUT extractbb -B cropbox -O figure/7-5.png
+INPUT ./figure/7-6.png
+INPUT ./figure/7-6.png
+INPUT ./figure/7-6.png
+INPUT extractbb -B cropbox -O figure/7-6.png
+INPUT ./figure/7-7.png
+INPUT ./figure/7-7.png
+INPUT ./figure/7-7.png
+INPUT extractbb -B cropbox -O figure/7-7.png
+INPUT ./figure/8-1.png
+INPUT ./figure/8-1.png
+INPUT ./figure/8-1.png
+INPUT extractbb -B cropbox -O figure/8-1.png
 INPUT out/report3.aux

@@ -1,4 +1,5 @@
-@startuml ユースケース図1
+@startuml 3-1
+title システムのユースケース
 left to right direction
 
 'アクター'
