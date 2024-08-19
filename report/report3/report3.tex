@@ -188,7 +188,19 @@
 
 \section{クラス図}
 \subsection*{概要}
-それぞれのクラスに対して動作等を記載する．
+全体のクラス図は図\ref*{fig:5-1}である．
+この図に対して，学生，教員それぞれに関係するクラスで分割して物で詳細な関係を分析した．
+そのため，\ref*{fig:5-1}における関係に重複度が内藤の不具合があるが，それは分割した詳細な図で行っているため問題ないと考えている．
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.3]{figure/5-1.png}
+  \end{center}
+  \caption{ユースケース図}
+  \label{fig:5-1}
+\end{figure}
+
+以下でそれぞれのクラスに関して何を行うためのものであるかを示す．
+
 \paragraph*{学生クラス}
 学生の名前や学生番号が属性として保存されている．
 科目の選択や時間割を確認等の動作を行う．
@@ -198,11 +210,28 @@
 %クラス図の表示(未完成なので用修正)
 \begin{figure}[H]
   \begin{center}
-    \includegraphics*[scale=0.4]{figure/5-1.png}
+    \includegraphics*[scale=0.4]{figure/5-2.png}
   \end{center}
-  \caption{ユースケース図}
-  \label{fig:5-1}
+  \caption{ユーザーに関するクラス図}
+  \label{fig:5-2}
 \end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.4]{figure/5-3.png}
+  \end{center}
+  \caption{学生に関するクラス図}
+  \label{fig:5-3}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.4]{figure/5-4.png}
+  \end{center}
+  \caption{教員に関するクラス図}
+  \label{fig:5-4}
+\end{figure}
+
 
 \newpage
 
@@ -349,7 +378,7 @@
 \newpage
 
 \section{設計モデルのクラス図}
-
+作成したクラス図に対して，パターンを導入する等の設計モデルの作成を行った．
 
 \section{まとめ}
 

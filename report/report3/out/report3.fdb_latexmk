@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1724073761 "out/report3.dvi" "out/report3.pdf" "out/report3" 1724073763 0
-  "out/report3.dvi" 1724073761 19276 0e9b08a9a8b5c9d820d16f5efd022778 "latex"
+["dvipdf"] 1724087714 "out/report3.dvi" "out/report3.pdf" "out/report3" 1724087717 0
+  "out/report3.dvi" 1724087714 20972 0292bf102f50ef69b413d0d1267f8e06 "latex"
   (generated)
   "out/report3.pdf"
   (rewritten before read)
-["latex"] 1724073746 "c:/Users/imayu/Documents/program/software-desine/report/report3/report3.tex" "out/report3.dvi" "report3" 1724073763 0
-  "c:/Users/imayu/Documents/program/software-desine/report/report3/report3.tex" 1724073745 11540 7eabe3d5e641b19c5b25f9a39241759e ""
+["latex"] 1724087693 "c:/Users/imayu/Documents/program/software-desine/report/report3/report3.tex" "out/report3.dvi" "report3" 1724087717 0
+  "c:/Users/imayu/Documents/program/software-desine/report/report3/report3.tex" 1724087675 12613 c446c2549053aaacf87f875680d9be5e ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1693405946 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1693405512 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1693408683 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -18,6 +18,7 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1693403936 928 2dc8d444221b7a635bb58038579b861a ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1693403936 908 2921f8a10601f252058503cc6570e581 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1693403936 940 228d6584342e91276bf566bcf9716b83 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1693404866 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1693404866 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1693404866 1524 4414a8315f39513458b80dfc63bff03a ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1693404866 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -184,6 +185,9 @@
   "figure/4-8.png" 1723854818 36890 0a1b80cfb997e491a33d8db4057da6dd ""
   "figure/4-9.png" 1723854828 96983 79f9d277f0e662560ba0d24699c102d6 ""
   "figure/5-1.png" 1723992690 195188 2bf78e0bdea42d8e71a72ddbd387acfa ""
+  "figure/5-2.png" 1724087210 28825 fc2e2a3fbdc60c4936ff71be8aac5917 ""
+  "figure/5-3.png" 1724087219 62708 0ddf3b3f25b6519018ae77ec1078597e ""
+  "figure/5-4.png" 1724087230 98137 4c95dac869d58f2412ad1adcdeab3899 ""
   "figure/6-1.png" 1723992843 31288 56bc20c92242fc8e0d7d33824eab55e0 ""
   "figure/6-2.png" 1723992742 73977 98a8b02dec92554815cf75d7f7c87e03 ""
   "figure/6-3.png" 1723992965 18914 54318ef33a0b2a296544974fef26c2a6 ""
@@ -199,8 +203,8 @@
   "figure/7-7.png" 1724046551 29687 c233ae5cbb8ccd64a262e6f06666211e ""
   "figure/8-1.png" 1724050506 15757 c274281983e960ed4028ffeacbae574f ""
   "jlisting.sty" 1698678000 6230 9fa8fe97d5afbd5a433990256cc4d5a3 ""
-  "out/report3.aux" 1724073761 3804 d4b6d80400b8ed6be248838d6b893eaf "latex"
-  "report3.tex" 1724073745 11540 7eabe3d5e641b19c5b25f9a39241759e ""
+  "out/report3.aux" 1724087714 4319 067634acb6ccedf2e5d88f209443eb75 "latex"
+  "report3.tex" 1724087675 12613 c446c2549053aaacf87f875680d9be5e ""
   (generated)
   "out/report3.aux"
   "out/report3.dvi"

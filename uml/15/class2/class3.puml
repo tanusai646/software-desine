@@ -1,7 +1,7 @@
-@startuml 9-2
-title 履修管理機能
+@startuml 8-3
+title 学生に関するクラス図
 
-'履修管理に関連するクラス
+'学生に関連するクラス
 class 学生{
     - 名前
     - 学生番号
@@ -18,6 +18,32 @@ class 履修 {
     + 科目が被っていないか確認()
     + 科目を登録する()
     + 履修を保存する()
+    + オブザーバーの追加()
+    + オブザーバーの削除()
+}
+
+interface State_for_class {
+    + 履修中に移行する
+    + 習得済みに移行する
+    + 未履修に移行する
+}
+
+class 履修中{
+    + 履修中に移行する
+    + 習得済みに移行する
+    + 未履修に移行する
+}
+
+class 修得済み{
+    + 履修中に移行する
+    + 習得済みに移行する
+    + 未履修に移行する
+}
+
+class 未履修{
+    + 履修中に移行する
+    + 習得済みに移行する
+    + 未履修に移行する
 }
 
 class 科目検索 {
@@ -29,14 +55,50 @@ class 科目一覧 {
     + 科目一覧を表示する()
 }
 
+class 必修科目 {
+    + 状態を取得する()
+}
+
 class 修得管理 {
-    + 修得状況を確認する()
+    + 修得状況の確認()
     + 履修を促す()
 }
 
+class 成績表{
+    - 学生番号
+    + 成績表を作成する
+    + 成績表を表示する
+}
+
+class 時間割{
+    - 時間割番号
+    - 学生
+    + 作成する()
+    + 表示する()
+}
+
+interface Observer_for_Student{
+    + 修得状況の確認()
+}
+
+interface Subject_for_Student{
+    + オブザーバーの追加()
+    + オブザーバーの削除()
+}
+
 学生 "*"-->"*" 科目検索
+学生 "*"-->"1" 時間割
+学生 "*"-->"1" 成績表
 科目検索 "1"-right-"1" 科目一覧
 科目検索 "1"-->"1" 履修 : 登録，削除する
-履修 "*"-right-"1" 修得管理
 
+Observer_for_Student <|.. 修得管理
+Observer_for_Student <-right-o Subject_for_Student
+Subject_for_Student <|-- 必修科目
+Subject_for_Student <|-- 履修
+
+必修科目 o--> State_for_class
+State_for_class <|-- 履修中
+State_for_class <|-- 修得済み
+State_for_class <|-- 未履修
 @enduml

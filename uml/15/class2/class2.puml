@@ -1,5 +1,5 @@
-@startuml 9-1
-title ユーザー管理機能
+@startuml 8-2
+title ユーザーに関するクラス図
 
 'ユーザー管理に関連するクラス'
 
@@ -7,6 +7,8 @@ abstract class ユーザー {
     - ID
     - Password
     + システムにログインする()
+    + オブザーバーの追加()
+    + オブザーバーの削除()
 }
 
 class 学生 {
@@ -30,8 +32,20 @@ class ログイン管理 {
     + Password確認()
 }
 
+interface Observer_for_login{
+    + 管理()
+}
+
+interface Subject_for_login{
+    + オブザーバーの追加()
+    + オブザーバーの削除()
+}
+
 ユーザー <|-down- 学生
 ユーザー <|-down- 教員
-ユーザー "1"-right-"*" ログイン管理
+
+Observer_for_login <.. ログイン管理
+Observer_for_login <-right-o Subject_for_login
+Subject_for_login <|-- ユーザー
 
 @enduml
