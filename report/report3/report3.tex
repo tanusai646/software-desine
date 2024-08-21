@@ -80,7 +80,6 @@
 これらの図を作成し，分析が一定できると，設計モデルの作成に着手した．
 設計モデルでは，パターンの適用を駆使し，システムがより現実的になるよう改変を加えた．
 
-
 \newpage
 
 \section{ユースケース図}
@@ -99,12 +98,6 @@
 教員は「システムにログイン」，「成績の報告をする」というユースケースを作成した．
 また，学生と同様に成績報告に関する通知を行うユースケースを関連付けている．
 
-\subsection*{レビュー結果}
-ユースケース「履修の可否を確認する」に関して，「学生」と関連をつけた方が良いということで，「履修登録する」にincludeで関連付けた．
-また，ユースケース「ログインする」が必要だと思ったので，作成し，他のユースケースと関連をつけた．
-
-概要から「履修修正」という要件があったが，今回のシステムでは履修削除と履修登録を組み合わせて行うと考えた．
-
 \subsection*{作成した図}
 レビュー等を通して作成したユースケースが図\ref*{fig:3-1}である．
 %ユースケース図の作成結果
@@ -115,6 +108,12 @@
   \caption{ユースケース図}
   \label{fig:3-1}
 \end{figure}
+
+\subsection*{レビュー内容}
+ユースケース「履修の可否を確認する」に関して，「学生」と関連をつけた方が良いということで，「履修登録する」にincludeで関連付けた．
+また，ユースケース「ログインする」が必要だと思ったので，作成し，他のユースケースと関連をつけた．
+
+概要から「履修修正」という要件があったが，今回のシステムでは履修削除と履修登録を組み合わせて行うと考えた．
 
 \newpage
 
@@ -195,19 +194,26 @@
   \begin{center}
     \includegraphics*[scale=0.3]{figure/5-1.png}
   \end{center}
-  \caption{ユースケース図}
+  \caption{クラス図}
   \label{fig:5-1}
 \end{figure}
 
-以下でそれぞれのクラスに関して何を行うためのものであるかを示す．
-
+\subsubsection*{ユーザー}
+図\ref*{fig:5-2}ではユーザーと，それを管理するための部分をまとめたものである．
 \paragraph*{学生クラス}
 学生の名前や学生番号が属性として保存されている．
 科目の選択や時間割を確認等の動作を行う．
 
-\subsection*{作成したもの}
+\paragraph*{教員クラス}
+教員の名前や教員IDが属性として保存されている．
+成績の登録という動作を行う．
 
-%クラス図の表示(未完成なので用修正)
+\paragraph*{ユーザークラス}
+学生と教員のスーパークラスであり，システムのログインというメソッドを共通化して持っている．
+
+\paragraph*{ログイン管理クラス}
+ユーザーがログインした際にログを取る等の動作を行うクラスである．
+
 \begin{figure}[H]
   \begin{center}
     \includegraphics*[scale=0.4]{figure/5-2.png}
@@ -215,6 +221,25 @@
   \caption{ユーザーに関するクラス図}
   \label{fig:5-2}
 \end{figure}
+
+\subsubsection*{学生}
+図\ref*{fig:5-3}では，学生に関する部分をまとめたクラス図である．
+\paragraph*{時間割}
+学生毎に時間割が作成される．
+履修クラスを参考にしながら時間割を作成し，時間割を表示するという動作を行う．
+
+\paragraph*{科目検索と科目一覧クラス}
+学生が科目を検索する際に行うクラスである．
+学生が曜日と時間を指定すると科目一覧クラスと連携して条件に合う科目を一覧として表示する．
+
+\paragraph*{履修クラス}
+履修クラスはある学生がどの科目を履修しているかを表すクラスである．学生毎に作成されることを想定している
+また，履修登録，削除ができるかも確認をする．
+このクラスで時間割を管理することを想定している．
+成績クラスを参照し，成績も一緒に保存することを想定する．
+
+\paragraph*{修得管理クラス}
+履修クラスで履修状況を確認し，修得できていなかったら修得を促すクラスである．
 
 \begin{figure}[H]
   \begin{center}
@@ -224,6 +249,28 @@
   \label{fig:5-3}
 \end{figure}
 
+\subsubsection*{教員}
+図\ref*{fig:5-4}では，教員に関する部分をまとめたクラス図である．
+
+\paragraph*{科目クラス}
+教員は複数の科目を担当することから，教員と関連をつけている．
+このクラスは学生と直接かかわりがないが，科目一覧等で間接的に関連付けることで履修等の情報を取れるようにしている．
+また，科目には必修，選択必修，選択の3種類の分類がされ，学生毎に科目の立ち位置も変わることから属性に追加するようにした．
+
+\paragraph*{担当科目一覧クラス}
+教員が担当している科目を一覧として表示するクラスである．
+一人の教員に対して一つの担当科目一覧があることから1対1対応をしている．
+
+\paragraph*{履修者一覧クラス}
+担当科目一覧で受け取った科目の履修者一覧を表示するためのクラスである．
+このクラスは履修クラスから作成，管理されることを想定している．
+
+\paragraph*{成績関連クラス}
+成績クラスは学生，科目毎にオブジェクトが作成されることを想定したクラス図である．
+このクラスを基に成績表クラスが作成，管理されている．
+また，成績クラスには，未登録，仮登録，本登録という教員の成績登録状況を持っている．
+その状況を基に教員に通知を行う報告管理クラスが関連づいている．
+
 \begin{figure}[H]
   \begin{center}
     \includegraphics*[scale=0.4]{figure/5-4.png}
@@ -232,6 +279,14 @@
   \label{fig:5-4}
 \end{figure}
 
+\subsection*{レビュー内容}
+\begin{itemize}
+  \item クラス図間の関連が複雑で，必要のない部分まで関連付けていたためかなりの省略を加えた．
+  \item 重複度が登録されていない部分があったので加えた．
+  \item 履修クラスに対して多くのメソッドがあり，責任が大きすぎたので他のクラスを作成することで責任をできるだけ小さくした．
+  \item 教員の成績登録の方法がシーケンス図等を通して変更されたことから，クラス図にも適用した．
+  \item 科目に必修等の分類があることから継承したクラスを新たに作成した．
+\end{itemize}
 
 \newpage
 
@@ -239,18 +294,32 @@
 \subsection*{概要}
 作成したシーケンス図は，
 \begin{itemize}
-  \item 
+  \item 図\ref*{fig:6-1}: ログイン時のシーケンス図
+  \item 図\ref*{fig:6-2}: 履修登録，削除のシーケンス図
+  \item 図\ref*{fig:6-3}: 時間割確認のシーケンス図
+  \item 図\ref*{fig:6-5}: 修得を促すのシーケンス図
+  \item 図\ref*{fig:6-4}: 成績を確認，登録のシーケンス図
+  \item 図\ref*{fig:6-6}: 成績報告メールのシーケンス図
 \end{itemize}
+である．
 
 
 \subsection*{作成した図}
+\subsubsection*{ログイン}
+ユーザーという学生，教員ともにログインを行う．
+IDとPasswordをユーザーが確認し，ログイン管理が確認を行っている．
+
+\subsubsection*{履修登録，削除}
+履修登録，削除をまとめて行うように工夫を行った．
+学生が選択した科目が履修登録されていなかった場合は履修登録をし，されていた場合は削除するというシーケンスにした．
+ユースケースやシステム概要には履修修正というものがあったが，今回のシステムは履修削除と登録を組み合わせて行うことからシーケンス図の作成は省略した．
 
 %シーケンス図の表示
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.49\columnwidth}
       \centering
-      \includegraphics[width=1.0\columnwidth]{figure/6-1.png}
+      \includegraphics[width=0.8\columnwidth]{figure/6-1.png}
       \caption{ログイン時のシーケンス図}
       \label{fig:6-1}
   \end{minipage}
@@ -262,116 +331,174 @@
   \end{minipage}
 \end{figure}
 
+\subsubsection*{時間割}
+履修クラスを反映し時間割を作成することから，シーケンス図を作成した．
+システム側は事前に時間割を作成しており，学生はそれを確認するのみと想定している．
+
+\subsubsection*{履修を促す}
+システム側が履修と必修を確認し，必修が修得されていなかった場合に修得を促す通知を出すと想定している．
+
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.49\columnwidth}
       \centering
-      \includegraphics[width=1.0\columnwidth]{figure/6-3.png}
+      \includegraphics[width=0.7\columnwidth]{figure/6-3.png}
       \caption{時間割確認のシーケンス図}
       \label{fig:6-3}
   \end{minipage}
   \begin{minipage}[b]{0.49\columnwidth}
       \centering
-      \includegraphics[width=1.0\columnwidth]{figure/6-5.png}
+      \includegraphics[width=0.7\columnwidth]{figure/6-5.png}
       \caption{修得を促すシーケンス図}
       \label{fig:6-5}
   \end{minipage}
 \end{figure}
 
+\subsubsection*{成績}
+教員が担当科目一覧から科目を選択し，その科目の履修者一覧をシステムが表示する．
+そこで教員が成績を入力し，システムが保存をしている．
+その保存された成績を基に成績表をシステムが作成し，学生はそれを閲覧するのみである．
+
 \begin{figure}[H]
   \begin{center}
     \includegraphics*[scale=0.5]{figure/6-4.png}
   \end{center}
-  \caption{ユースケース図}
+  \caption{成績を確認，登録のシーケンス図}
   \label{fig:6-4}
 \end{figure}
+
+\paragraph*{成績報告}
+成績報告のステータスを確認し，もし成績が登録されていなかった場合，期間ごとに操作が異なる．
+一週間前の場合は報告期限を通知し，提出期限を超えていた場合は提出の督促を通知している．
 
 \begin{figure}[H]
   \begin{center}
     \includegraphics*[scale=0.5]{figure/6-6.png}
   \end{center}
-  \caption{ユースケース図}
+  \caption{成績報告メールのシーケンス図}
   \label{fig:6-6}
 \end{figure}
 
+\subsection*{レビュー内容}
+\begin{itemize}
+  \item 履修登録，削除を同じシーケンスで表せるような動作にするよう工夫を行った．
+  \item 時間割や成績確認では，システムが作成し，学生が確認できる状態に変更した．
+  \item 複数のシーケンス図では流れが変だったので変更を加えた．
+\end{itemize}
 
 \newpage
 
 \section{アクティビティ図}
 \subsection*{概要}
-作成したアクティビティ図は「バスの位置を確認する」と「バスの位置を記録する」である．
-
+作成したアクティビティ図は，
+\begin{itemize}
+  \item 図\ref*{fig:7-1}: ログインするのアクティビティ図
+  \item 図\ref*{fig:7-2}: 履修登録，削除のアクティビティ図
+  \item 図\ref*{fig:7-3}: 時間割を確認のアクティビティ図
+  \item 図\ref*{fig:7-4}: 成績を確認のアクティビティ図
+  \item 図\ref*{fig:7-5}: 成績を登録するのアクティビティ図
+  \item 図\ref*{fig:7-6}: 未修得の履修を促すのアクティビティ図
+  \item 図\ref*{fig:7-7}: 成績報告の通知を出す
+\end{itemize}
+である．
 
 \subsection*{作成した図}
+\subsubsection*{ログイン}
+今回は学生のみで作成しているが，教員でも同じ動作をする．
+学生が入力したID，Passwordをシステムが正しいか確認し，それぞれで動作が異なる．
+
 \begin{figure}[H]
   \begin{center}
     \includegraphics*[scale=0.4]{figure/7-1.png}
   \end{center}
-  \caption{ユースケース図}
+  \caption{ログインするのアクティビティ図}
   \label{fig:7-1}
 \end{figure}
+
+\paragraph*{履修登録，削除}
+学生が曜日，時間を選択し，システムが条件にあう科目を表示する．
+学生がその科目を選択することで，その科目の状況によって動作が異なる．
+それぞれ登録や削除ができるかを確認し，エラーの場合はエラーを表示する動作を行う．
 
 \begin{figure}[H]
   \begin{center}
     \includegraphics*[scale=0.4]{figure/7-2.png}
   \end{center}
-  \caption{ユースケース図}
+  \caption{履修登録，削除のアクティビティ図のアクティビティ図}
   \label{fig:7-2}
 \end{figure}
+
+\subsubsection*{時間割，成績}
+システムが時間割や成績を作成し，学生がそれを確認している．
 
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.49\columnwidth}
       \centering
-      \includegraphics[width=0.9\columnwidth]{figure/7-3.png}
-      \caption{ログイン時のシーケンス図}
+      \includegraphics[width=0.8\columnwidth]{figure/7-3.png}
+      \caption{時間割を確認するのアクティビティ図}
       \label{fig:7-3}
   \end{minipage}
   \begin{minipage}[b]{0.49\columnwidth}
       \centering
-      \includegraphics[width=0.9\columnwidth]{figure/7-4.png}
-      \caption{履修登録，履修削除のシーケンス図}
+      \includegraphics[width=0.8\columnwidth]{figure/7-4.png}
+      \caption{成績を確認するのアクティビティ図}
       \label{fig:7-4}
   \end{minipage}
 \end{figure}
+
+\subsubsection*{成績を登録}
+教員が担当している科目を表示，教員が科目を選択する．
+システムはその科目の履修者を表示し，教員がせ成績を入力する．
+そのまま教員が保存すると仮成績として保存し，すべての履修者に成績が入力されていた場合，本成績として保存する．
+
+\subsubsection*{未習得の履修}
+システムが必修科目や履修状況を確認することで，修得したほうが良いと判断した際に学生に修得を促すようにしている．
+
 
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.49\columnwidth}
       \centering
-      \includegraphics[width=1.0\columnwidth]{figure/7-5.png}
-      \caption{ログイン時のシーケンス図}
+      \includegraphics[width=0.9\columnwidth]{figure/7-5.png}
+      \caption{成績を登録するのアクティビティ図}
       \label{fig:7-5}
   \end{minipage}
   \begin{minipage}[b]{0.49\columnwidth}
       \centering
-      \includegraphics[width=1.0\columnwidth]{figure/7-6.png}
-      \caption{履修登録，履修削除のシーケンス図}
+      \includegraphics[width=0.8\columnwidth]{figure/7-6.png}
+      \caption{未習得の履修を促すのアクティビティ図}
       \label{fig:7-6}
   \end{minipage}
 \end{figure}
 
+\subsubsection*{成績報告}
+成績報告の期間によって動作が異なる．
+すべての履修者に対して成績が登録されていた場合は何も行わないが，登録されていない場合は成績報告の督促等を通知する．
+
 \begin{figure}[H]
   \begin{center}
-    \includegraphics*[scale=0.4]{figure/7-7.png}
+    \includegraphics*[scale=0.6]{figure/7-7.png}
   \end{center}
-  \caption{ユースケース図}
+  \caption{成績報告の通知を出すアクティビティ図}
   \label{fig:7-7}
 \end{figure}
 \newpage
 
 \section{ステートマシン図}
 \subsection*{概要}
-今回のシステムにおいて，「成績」の報告に関してステートが変化することからステートマシン図を作成した．
+今回のシステムにおいて，「成績」の報告に関してステートマシン図を作成した．
+
+
+\subsection*{作成した図}
 成績は，「未登録状態」→「仮成績」→「本成績」の順で変化する．
 その図を図\ref*{fig:8-1}で示す．
 
-\subsection*{作成した図}
 \begin{figure}[H]
   \begin{center}
     \includegraphics*[scale=0.6]{figure/8-1.png}
   \end{center}
-  \caption{}
+  \caption{成績のステートマシン図}
   \label{fig:8-1}
 \end{figure}
 
@@ -379,8 +506,41 @@
 
 \section{設計モデルのクラス図}
 作成したクラス図に対して，パターンを導入する等の設計モデルの作成を行った．
+また，シーケンス図やステートマシン図等を通して追加したほうが良いと考えたクラス図も追加する作業を行った．
 
-\section{まとめ}
+\subsubsection*{ユーザー}
+図\ref*{fig:5-2}のユーザーに関するクラス図に対しては，Observerパターンを使用し，ログインの履歴を取る「ログイン管理」クラスがログインを適切に管理できるよう改変を行った．
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.4]{figure/9-2.png}
+  \end{center}
+  \caption{設計モデルを適用したログインに関するクラス図}
+  \label{fig:9-2}
+\end{figure}
 
+\subsubsection*{学生}
+図\ref*{fig:5-3}の学生に関するクラス図に関しては，ObserverパターンとStateパターンを用いて設計モデルを作成した．
+Observerパターンにおいては，学生の習得状況を取得する際に適用を行った．
+Stateパターンは当初のクラス図では使用していなかった，修得状況に対して適用を行った．
+修得状況は「必修科目」クラスに関連付けられており，学生それぞれの修得状況によって状態が変更される．
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.4]{figure/9-3.png}
+  \end{center}
+  \caption{設計モデルを適用した学生に関するクラス図}
+  \label{fig:9-3}
+\end{figure}
+
+\subsubsection*{教員}
+図\ref*{fig:5-4}の教員に関するクラス図に対しても，ObserverパターンとStateパターンを用いた．
+Observerパターンにおいては，教員が成績を報告しているかの管理に対して使用した．
+Stateパターンにおいても，教員が成績の報告状況にたいてい使用している．
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics*[scale=0.4]{figure/9-4.png}
+  \end{center}
+  \caption{設計モデルを適用した教員に関するクラス図}
+  \label{fig:9-4}
+\end{figure}
 
 \end{document}

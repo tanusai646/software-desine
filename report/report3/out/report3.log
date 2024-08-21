@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.8.31)  20 AUG 2024 02:14
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.8.31)  20 AUG 2024 12:20
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -668,20 +668,20 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 87.
+(Font)              scaled to size 11.53198pt on input line 86.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 87.
+(Font)              scaled to size 11.53198pt on input line 86.
 File: figure/3-1.png Graphic file (type bmp)
 <figure/3-1.png>
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 115.
+(Font)              scaled to size 8.64899pt on input line 108.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 115.
+(Font)              scaled to size 8.64899pt on input line 108.
 [3]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 127.
+(Font)              scaled to size 9.60999pt on input line 126.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 127.
+(Font)              scaled to size 9.60999pt on input line 126.
 File: figure/4-1.png Graphic file (type bmp)
 <figure/4-1.png>
 File: figure/4-2.png Graphic file (type bmp)
@@ -711,48 +711,59 @@ File: figure/4-12.png Graphic file (type bmp)
 [6]
 File: figure/5-1.png Graphic file (type bmp)
 <figure/5-1.png>
+[7]
 File: figure/5-2.png Graphic file (type bmp)
 <figure/5-2.png>
-[7]
 File: figure/5-3.png Graphic file (type bmp)
 <figure/5-3.png>
+[8]
 File: figure/5-4.png Graphic file (type bmp)
 <figure/5-4.png>
-[8] [9]
+[9] [10]
 File: figure/6-1.png Graphic file (type bmp)
 <figure/6-1.png>
 File: figure/6-2.png Graphic file (type bmp)
 <figure/6-2.png>
+[11]
 File: figure/6-3.png Graphic file (type bmp)
 <figure/6-3.png>
 File: figure/6-5.png Graphic file (type bmp)
 <figure/6-5.png>
-[10]
+[12]
 File: figure/6-4.png Graphic file (type bmp)
 <figure/6-4.png>
-[11]
+[13]
 File: figure/6-6.png Graphic file (type bmp)
 <figure/6-6.png>
-[12]
+[14] [15]
 File: figure/7-1.png Graphic file (type bmp)
 <figure/7-1.png>
 File: figure/7-2.png Graphic file (type bmp)
 <figure/7-2.png>
+[16]
 File: figure/7-3.png Graphic file (type bmp)
 <figure/7-3.png>
 File: figure/7-4.png Graphic file (type bmp)
 <figure/7-4.png>
-[13]
 File: figure/7-5.png Graphic file (type bmp)
 <figure/7-5.png>
 File: figure/7-6.png Graphic file (type bmp)
 <figure/7-6.png>
+[17]
 File: figure/7-7.png Graphic file (type bmp)
 <figure/7-7.png>
-[14] [15]
+[18] [19]
 File: figure/8-1.png Graphic file (type bmp)
 <figure/8-1.png>
-[16] [17] (out/report3.aux)
+[20]
+File: figure/9-2.png Graphic file (type bmp)
+<figure/9-2.png>
+File: figure/9-3.png Graphic file (type bmp)
+<figure/9-3.png>
+[21]
+File: figure/9-4.png Graphic file (type bmp)
+<figure/9-4.png>
+[22] [23] (out/report3.aux)
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-06-01> patch level 1
@@ -760,42 +771,12 @@ L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 22511 strings out of 475592
- 470603 smp)
-<figure/7-4.png>
-[13]
-File: figure/7-5.png Graphic file (type bmp)
-<figure/7-5.png>
-File: figure/7-6.png Graphic file (type bmp)
-<figure/7-6.png>
-File: figure/7-7.png Graphic file (type bmp)
-<figure/7-7.png>
-[14] [15]
-
-LaTeX Warning: Reference `fig:8-1' on page 16 undefined on input line 367.
-
-File: figure/8-1.png Graphic file (type bmp)
-<figure/8-1.png>
-[16] [17] (out/report3.aux)
- ***********
-pLaTeX2e <2023-02-14>+1, based on
-LaTeX2e <2023-06-01> patch level 1
-L3 programming layer <2023-08-29>
- ***********
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
-Here is how much of TeX's memory you used:
- 22515 strings out of 475592
- 470652 string characters out of 5778113
+ 22532 strings out of 475592
+ 470975 string characters out of 5778113
  1918637 words of memory out of 5000000
- 43646 multiletter control sequences out of 15000+600000
- 571982 words of font info for 101 fonts, out of 8000000 for 9000
+ 43661 multiletter control sequences out of 15000+600000
+ 571674 words of font info for 100 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  84i,6n,89p,474b,463s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/report3.dvi (17 pages, 20972 bytes).
+Output written on out/report3.dvi (23 pages, 36312 bytes).
